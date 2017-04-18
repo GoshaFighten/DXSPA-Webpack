@@ -59,7 +59,9 @@ module.exports = {
             template: 'index.html'
         }),
 
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
+
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     devtool: 'cheap-source-map',
